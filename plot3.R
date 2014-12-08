@@ -1,0 +1,8 @@
+data <- read.table(file = "data.csv", header = TRUE, sep = ";")
+data[, "DateTime"] <- as.POSIXct(paste(data$Date,data$Time), format = "%d/%m/%Y %H:%M:%S")
+plot(data[[7]], x = data$DateTime, xlab="",ylab = "Energy sub metering", type = "l")
+plot(data[[8]], x = data$DateTime, xlab="",ylab = "Energy sub metering", type = "l")
+plot(data[[9]], x = data$DateTime, xlab="",ylab = "Energy sub metering", type = "l")
+#legend("Sub_metering_1", col="black")
+dev.copy(png, file = "plot3.png", width = 480, height = 480)
+dev.off()
