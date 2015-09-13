@@ -1,3 +1,5 @@
+# 2015/09/13
+
 # Read data fields separated with semicolons
 data <- read.table(file = "data.csv", header = TRUE, sep = ";", na.strings = "?")
 
