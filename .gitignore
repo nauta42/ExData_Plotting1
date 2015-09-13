@@ -3,3 +3,5 @@
 .RData
 data/
 *.Rproj
+household_power_consumption.*
+data.csv
